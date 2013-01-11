@@ -185,7 +185,6 @@ enyo.kind({
           var params = {
           type: "status",
           statusText: $L("Check out this web page: ") + this.url
-          }
           };
           this.$.launchApplicationService.call({id: "com.appstuh.sparrow", params: params});
         },
