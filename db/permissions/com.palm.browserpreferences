@@ -8,5 +8,15 @@
 		,	"update": "allow"
 		,	"delete": "allow"
 		}
+	},
+	{	"type"		: "db.kind"
+	,	"object"	: "com.palm.browserpreferences:1"
+	,	"caller"	: "com.palm.app.isisbrowser"
+	,	"operations":
+		{	"create": "allow"
+		,	"read"	: "allow"
+		,	"update": "allow"
+		,	"delete": "allow"
+		}
 	}
 ]
