@@ -611,6 +611,9 @@ enyo.kind({
 	shareClick: function() {
 		this.$.browser.shareLink(this.url, this.title);
 	},
+    downloadClick: function(inSender, inLink) {
+        this.downloadResource(inLink);
+    },
 	bookmarksClick: function() {
 		this.$.toaster.open();
 		this.$.drawerPane.selectView(this.$.drawerPane.getView());

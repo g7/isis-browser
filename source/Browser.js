@@ -345,6 +345,9 @@ enyo.kind({
 	shareLink: function(inUrl, inTitle) {
         this.showShareLinkDialog(inUrl, inTitle);
 	},
+    downloadlinkClick: function(inTapInfo) {
+        this.doDownloadLink(inTapInfo.linkUrl);
+    },
 	copyToPhotosClick: function(inTapInfo, inPosition) {
 		this.viewCall("saveImageAtPoint", [inPosition.left, inPosition.top, "/media/internal",
 			enyo.hitch(this, "finishCopyToPhotos", inTapInfo)]);
