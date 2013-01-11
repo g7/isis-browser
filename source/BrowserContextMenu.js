@@ -25,7 +25,8 @@ enyo.kind({
 	linkItems: [
 		{caption: $L("Open In New Card"), value:"newCardClick"},
 		{caption: $L("Share Link"), value:"shareLinkClick"},
-		{caption: $L("Copy URL"), value:"copyLinkClick"}
+		{caption: $L("Copy URL"), value:"copyLinkClick"}{
+        {caption: $L("Download Link"), value:"downloadlinkClick"}
 	],
 	imageItems: [
 		{caption: $L("Copy To Photos"), value: "copyToPhotosClick"},
