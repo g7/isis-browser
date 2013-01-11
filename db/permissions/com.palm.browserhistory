@@ -1,6 +1,6 @@
 [	{	"type"		: "db.kind"
 	,	"object"	: "com.palm.browserhistory:1"
-	,	"caller"	: "com.palm.app.isisbrowser"
+	,	"caller"	: "com.palm.app.browser"
 	,	"operations":
 		{	"create": "allow"
 		,	"read"	: "allow"
