@@ -30,6 +30,11 @@ enyo.kind({
         type: "messaging",
         exists: true
     },{
+        title: "Sparrow",
+        image: "images/icons/sparrow-32x32.png",
+        type: "sparrow",
+        checkExistance: true
+    },{
         title: "Facebook",
         image: "images/icons/facebook-32x32.png",
         type: "facebook",
@@ -94,7 +99,7 @@ enyo.kind({
                 }, {
                     name: "downloadButton",
                     kind: "CustomButton",
-                    showing: false,
+                    showing: true,
                     className: "download-button"
                 }]
             }]
@@ -119,7 +124,7 @@ enyo.kind({
                 this.$.shareMessage.setContent("Share link via");
             }
 
-            this.$.downloadButton.hide();
+            this.$.downloadButton.show();
 
             var itemDefinition = this.SHARE_LINK_LIST[inIndex];
             this.$.icon.setSrc(itemDefinition.image);
@@ -154,7 +159,9 @@ enyo.kind({
             this.shareLinkViaMessaging();
         } else if (shareServiceType === "facebook") {
             this.shareLinkViaFacebook();
-        }
+          } else if (shareServiceType === "sparrow") {
+          this.shareLinkViaSparrow();
+          }
         this.close();
     },
     shareLinkViaEmail: function () {
@@ -174,6 +181,14 @@ enyo.kind({
         };
         this.$.launchApplicationService.call({id: "com.palm.app.messaging", params: params});
     },
+    shareLinkViaSparrow: function () {
+          var params = {
+          type: "status",
+          statusText: $L("Check out this web page: ") + this.url
+          }
+          };
+          this.$.launchApplicationService.call({id: "com.appstuh.sparrow", params: params});
+        },
     shareLinkViaFacebook: function () {
         var params = {
             type: "status",

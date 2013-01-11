@@ -1,7 +1,7 @@
 [	
 	{	"type"		: "db.kind"
 	,	"object"	: "com.palm.browserbookmarks:1"
-	,	"caller"	: "com.palm.app.enyo-browser"
+	,	"caller"	: "com.palm.app.isisbrowser"
 	,	"operations":
 		{	"create": "allow"
 		,	"read"	: "allow"

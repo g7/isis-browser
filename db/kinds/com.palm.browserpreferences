@@ -1,6 +1,6 @@
 {
 	"id":"com.palm.browserpreferences:1",
-	"owner":"com.palm.app.browser",
+	"owner":"com.palm.app.isisbrowser",
 	"indexes": [
 		{"name":"key", "props":[{"name":"key"}]}
 	],

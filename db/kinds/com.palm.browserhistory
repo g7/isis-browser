@@ -1,6 +1,6 @@
 {
 	"id":"com.palm.browserhistory:1",
-	"owner":"com.palm.app.browser",
+	"owner":"com.palm.app.isisbrowser",
 	"indexes":[	{"name": "url", "props": [{"name": "url"}] },
 				{"name": "title", "props": [{"name": "title"}] },
 				{"name": "search", "props": [{"name":"searchText", "type":"multi", "collate":"primary","include":[{"name":"title","tokenize":"all"},

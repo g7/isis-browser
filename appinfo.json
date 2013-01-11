@@ -1,10 +1,10 @@
 {
-	"id": "com.palm.app.browser",
+	"id": "com.palm.app.isisbrowser",
 	"version": "1.0.0",
 	"vendor": "HP",
 	"type": "web",
 	"main": "index.html",
-	"title": "Web",
+	"title": "Isis Web",
 	"keywords" : [ "web", "Browser", "Blazer", "Internet" ],
 	"icon": "icon.png",
 	"splashicon": "icon-256x256.png",
@@ -13,7 +13,7 @@
 	"universalSearch": {
 		"dbsearch": {
 			"displayName":"Bookmarks & History",
-			"url":"com.palm.app.browser",
+			"url":"com.palm.app.isisbrowser",
 			"launchParam":"url",
 			"launchParamDbField":"url",
 			"displayFields": ["title", "url"],
