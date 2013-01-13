@@ -36,6 +36,7 @@ enyo.kind({
 		onClose: ""
 	},
 	components: [
+		{kind: "Control", style: "position:absolute; bottom:0px; left:0px; height:8px; width:1024px; background-color:none; z-index:120;"},
 		{name: "launchApplicationService", kind: enyo.PalmService, service: enyo.palmServices.application, method: "open"},
 		{name: "importWallpaperService", kind: enyo.PalmService, service: enyo.palmServices.system, method: "wallpaper/importWallpaper", onSuccess: "importedWallpaper", onFailure: "wallpaperError"},
 		{name: "setWallpaperService", kind: enyo.PalmService, service: enyo.palmServices.system, method: "setPreferences", onFailure: "wallpaperError"},
@@ -51,6 +52,7 @@ enyo.kind({
 			onOpenBookmarks: "doOpenBookmarks",
 			onNewCard: "openNewCard"
 		},
+		{name: "findDialog", kind: "FindBar", showing: false, onFind: "find", onGoToPrevious: "goToPrevious", onGoToNext: "goToNext"},
 		{name: "view", kind: "WebView", flex: 1, height: "100%",
 			onMousehold: "openContextMenu",
 			onPageTitleChanged: "pageTitleChanged",
@@ -137,16 +139,25 @@ enyo.kind({
 		this.viewCall("printFrame", ["", inJobID, inPrintParams.width, inPrintParams.height, inPrintParams.pixelUnits, false, inPrintParams.renderInReverseOrder]);
 	},
 	showFind: function() {
-		this.$.findBar.show();
+		//this.$.findBar.show();
+		this.findStr = null;
+ 		this.$.findDialog.show();
 	},
 	//* @protected
 	find: function(inSender, inString) {
 		this.log(inString);
-		this.$.view.callBrowserAdapter("findInPage", [inString]);
+	//this.$.view.callBrowserAdapter("findInPage", [inString]);
+	if (this.findStr != inString) {
+			/* Reset */
+			this.$.view.findInPage("");
+			this.findStr = inString;
+		}
+		this.$.view.findInPage(this.findStr);
 	},
 	goToPrevious: function() {
 	},
 	goToNext: function() {
+		this.$.view.findInPage(this.findStr);
 	},
 	setEnableJavascript: function(inEnable) {
 		this.viewCall("setEnableJavascript", [inEnable]);
