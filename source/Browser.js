@@ -139,14 +139,14 @@ enyo.kind({
 		this.viewCall("printFrame", ["", inJobID, inPrintParams.width, inPrintParams.height, inPrintParams.pixelUnits, false, inPrintParams.renderInReverseOrder]);
 	},
 	showFind: function() {
-		//* this.$.findBar.show();
+		//this.$.findBar.show();
 		this.findStr = null;
  		this.$.findDialog.show();
 	},
 	//* @protected
 	find: function(inSender, inString) {
 		this.log(inString);
-	//*	this.$.view.callBrowserAdapter("findInPage", [inString]);
+	//this.$.view.callBrowserAdapter("findInPage", [inString]);
 	if (this.findStr != inString) {
 			/* Reset */
 			this.$.view.findInPage("");
