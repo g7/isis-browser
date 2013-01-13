@@ -113,7 +113,7 @@ enyo.kind({
 		},
 		{kind: "PrintDialog", lazy: false, duplexOption: true, colorOption: true, onRenderDocument: "renderDocument", appName: "Browser"},
 		{kind: "AppMenu", onBeforeOpen: "toggleAppMenuItems", components: [
-			//* {caption: $L("Find on Page"), onclick: "showFindOnPage"},
+			//{caption: $L("Find on Page"), onclick: "showFindOnPage"},
 			{name: "findMenuItem", caption: $L("Find on Page"), onclick: "showFindOnPage"},
 			{name: "preferencesItem", caption: $L("Preferences"), onclick: "preferencesClick"},
 			{name: "printMenuItem", caption: $L("Print"), onclick: "printClick"},
