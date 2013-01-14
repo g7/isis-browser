@@ -33,7 +33,7 @@ enyo.kind({
         title: "Sparrow",
         image: "images/icons/sparrow-32x32.png",
         type: "sparrow",
-        checkExistance: true
+        checkExistance: true
     },{
         title: "Facebook",
         image: "images/icons/facebook-32x32.png",
