@@ -185,8 +185,8 @@ enyo.kind({
     },
     shareLinkViaSparrow: function () {
           var params = {
-          WindowType: "newTweet",
-          tweetText: $L("Check out this web page: ") + this.url
+          windowType: "newTweet",
+          tweetText: "Check out this web page: " + this.url
           };
           this.$.launchApplicationService.call({id: "com.appstuh.sparrow", params: params});
         },
