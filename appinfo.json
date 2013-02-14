@@ -1,7 +1,7 @@
 {
 	"id": "com.palm.app.isisbrowser",
 	"version": "1.4.0",
-	"vendor": "HP",
+	"vendor": "Juno Avalon",
 	"type": "web",
 	"main": "index.html",
 	"title": "Isis Web",
