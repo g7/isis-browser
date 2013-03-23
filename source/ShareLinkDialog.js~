@@ -33,7 +33,7 @@ enyo.kind({
         title: "Sparrow",
         image: "images/icons/sparrow-32x32.png",
         type: "sparrow",
-        checkExistance: true
+        checkExistance: true
     },{
         title: "Facebook",
         image: "images/icons/facebook-32x32.png",
@@ -235,7 +235,7 @@ enyo.kind({
                 }
             }, this);
         }
-
+		
         foundSparrow = apps.some(function (app) {
             this.log(enyo.json.stringify(app));
             if (app.id === "com.appstuh.sparrow") {
